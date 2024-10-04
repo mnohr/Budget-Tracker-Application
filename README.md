@@ -1,27 +1,83 @@
-# BudgetTrackerApp
+# Budget Tracker Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+A simple budget tracker application built with **Angular** that allows users to manage their income and expenses. The application supports user registration, login, and personalized data storage. It implements SOLID principles and best design practices, utilizing **local storage** for data persistence.
 
-## Development server
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
+- User Registration and Login
+- Track Income and Expenses
+- CRUD Operations (Create, Read, Update, Delete)
+- Data Pagination and Filtering (by amount, date, type)
+- Data stored in LocalStorage (per user)
+- Summary Dashboard with Total Income, Total Expenses, and Balance
+- Auto Logout after session timeout
+- Edit and Delete functionality for each entry
+- Follows SOLID principles and best coding practices
+- Responsive Design using Angular Material
 
-## Code scaffolding
+## Technologies Used
+- **Angular 16**
+- **TypeScript**
+- **Angular Material** (for UI components)
+- **RxJS** (for reactive programming)
+- **SCSS** (for styling)
+- **LocalStorage** (for data persistence)
+- **uuid** (for generating unique IDs)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-## Build
+### Prerequisites
+- **Node.js**: Install the latest version of Node.js from [here](https://nodejs.org/)
+- **Angular CLI**: Install the Angular CLI globally on your system:
+```bash
+  npm install -g @angular/cli
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Installation
+Clone the repository
 
-## Running unit tests
+```
+https://github.com/mnohr/Budget-Tracker-Application.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+cd budget-tracker
+```
+Install dependencies
 
-## Running end-to-end tests
+```
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run the application
 
-## Further help
+```
+ng serve
+```
+Open your browser and navigate to http://localhost:4200/.
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Folder Structure
+
+src/
+│
+├── app/
+│   ├── core/                       # Core services (Auth, IncomeExpense service)
+│   ├── models/                     # Application models
+│   ├── components/                 # Angular components (Dashboard, Forms)
+│   └── shared/                     # Shared modules and utilities
+│
+├── assets/                         # Assets like images, fonts
+│
+├── environments/                   # Environment-specific configurations
+│
+├── styles.scss                     # Global styles
+│
+└── main.ts                         # Main application entry point
+
