@@ -7,8 +7,6 @@ A simple budget tracker application built with **Angular** that allows users to 
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
 
 ## Features
 - User Registration and Login
@@ -19,7 +17,6 @@ A simple budget tracker application built with **Angular** that allows users to 
 - Summary Dashboard with Total Income, Total Expenses, and Balance
 - Auto Logout after session timeout
 - Edit and Delete functionality for each entry
-- Follows SOLID principles and best coding practices
 - Responsive Design using Angular Material
 
 ## Technologies Used
@@ -60,11 +57,12 @@ Run the application
 ```
 ng serve
 ```
+
 Open your browser and navigate to http://localhost:4200/.
-```
+
 
 ### Folder Structure
-
+```
 src/
 │
 ├── app/
@@ -79,5 +77,6 @@ src/
 │
 ├── styles.scss                     # Global styles
 │
-└── main.ts                         # Main application entry point
+└── main.ts                         # Main 
 
+```
