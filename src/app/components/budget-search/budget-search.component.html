@@ -1,0 +1,13 @@
+<div class="search-bar">
+  <form>
+    <mat-form-field appearance="fill">
+      <input
+        type="text"
+        placeholder="Search here..."
+        matInput
+        [formControl]="searchControl"
+        [(ngModel)]="searchFilterValue"
+      />
+    </mat-form-field>
+  </form>
+</div>
