@@ -1,0 +1,59 @@
+.budget-list {
+  display: flex;
+}
+
+.userName {
+  padding: 11px 0px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+  float: left;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.dashborad-menu {
+  padding: 0px 20px;
+}
+
+
+// .dashboard-menu{
+//     // display: flex;
+//     // justify-content: space-between;
+//     // width: 100%;
+//     display: flex;
+//   justify-content: center; /* align horizontal */
+//   align-items: center; /* align vertical */
+// }
+
+// mat-card-title{
+//     display: flex;
+// }
+
+// mat-card-subtitle{
+//     display: flex;
+// }
+// .right-menu {
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//   }
+
+// ::ng-deep .mat-card-header-text .mat-mdc-card-header-text{
+//     display: flex;
+//     justify-content: space-between;
+//     width: 100%;
+// }
