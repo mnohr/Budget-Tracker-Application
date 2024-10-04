@@ -6,23 +6,26 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  error:  string = "'Username or password invalid'";
+  error: string = "'Username or password invalid'";
 
-
-  constructor(private formBuilder:  FormBuilder,private authService:AuthService,private router:Router) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.loginForm = this.formBuilder.group({
-      email:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required]]
-    })
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+    });
   }
 
-  login():void{
-    if(this.loginForm.valid){
-      const {email,password} = this.loginForm.value;
+  login(): void {
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
       if (this.authService.login(email, password)) {
         this.router.navigate(['/dashboard']);
       } else {
