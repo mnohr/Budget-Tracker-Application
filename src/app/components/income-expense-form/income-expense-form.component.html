@@ -1,1 +1,71 @@
-<p>income-expense-form works!</p>
+<div>
+  <h3 mat-dialog-title>Add Income/Expense</h3>
+  <form [formGroup]="incomeExpenseForm" (ngSubmit)="saveEntry()">
+    <mat-form-field class="mat-form-field">
+      <input matInput formControlName="name" placeholder="Name" />
+      <mat-error
+        *ngIf="
+          incomeExpenseForm.get('name')?.invalid &&
+          incomeExpenseForm.get('name')?.touched
+        "
+      >
+        Name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="mat-form-field">
+      <input
+        matInput
+        formControlName="amount"
+        type="number"
+        placeholder="Amount"
+      />
+      <mat-error
+        *ngIf="
+          incomeExpenseForm.get('amount')?.invalid &&
+          incomeExpenseForm.get('amount')?.touched
+        "
+      >
+        Amount is required and must be greater than 0.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="mat-form-field">
+      <input matInput formControlName="date" type="date" />
+      <mat-error
+        *ngIf="
+          incomeExpenseForm.get('date')?.invalid &&
+          incomeExpenseForm.get('date')?.touched
+        "
+      >
+        Date is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="mat-form-field">
+      <mat-select formControlName="type">
+        <mat-option value="income">Income</mat-option>
+        <mat-option value="expense">Expense</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="mat-form-field">
+      <mat-select formControlName="recurring">
+        <mat-option value="monthly">Monthly</mat-option>
+        <mat-option value="one time">One Time</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="button-container">
+      <button
+        mat-raised-button
+        type="submit"
+        [disabled]="incomeExpenseForm.invalid"
+      >
+        {{ submitText }}
+      </button>
+      <button mat-raised-button type="button" (click)="closeDialog()">
+        Close
+      </button>
+    </div>
+  </form>
+</div>
