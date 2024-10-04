@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AutoLogoutService } from './core/autoLogout.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'budget-tracker-app';
+
+  constructor(private autoLogoutService: AutoLogoutService) {
+    // AutoLogoutService automatically starts tracking user activity
+  }
 }
