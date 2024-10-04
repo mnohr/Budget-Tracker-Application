@@ -1,0 +1,28 @@
+.mat-card {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 400px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
